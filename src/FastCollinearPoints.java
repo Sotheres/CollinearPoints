@@ -58,7 +58,7 @@ public class FastCollinearPoints {
         int mid = lo + (hi - lo) / 2;
         sort(arr, temp, cmp, lo, mid);
         sort(arr, temp, cmp, mid + 1, hi);
-        if (cmp.compare(arr[mid], arr[mid+1]) < 0) {
+        if (cmp.compare(arr[mid], arr[mid+1]) <= 0) {
             return;
         }
         merge(arr, temp, cmp, lo, mid, hi);
